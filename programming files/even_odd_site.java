@@ -1,4 +1,4 @@
-
+// Bugged by Connor Brown on 10/24/23
 
 import java.io.*;
 
@@ -7,8 +7,8 @@ public class even_odd_site {
         BufferedWriter file = new BufferedWriter(new FileWriter("numbers.html"));
         file.write("<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n");
         file.write("<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n");
-        for (int i = 1; i <= 50; i++) {
-            if (i % 2 == 0) {
+        for (int i = 1; i <= 50; i += 2) {
+            if (i % 2 == 1) {
                 file.write("<tr><td>" + i + "</td><td></td></tr>\n");
             }
             else {
