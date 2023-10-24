@@ -3,6 +3,8 @@
 #include <algorithm>
 using namespace std;
 
+// bugs introduced - TA 
+
 //remove_duplicates returns a vector<int>
 vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
     //initialize a new vector
@@ -11,7 +13,7 @@ vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
     sort(arr.begin(), arr.end());
     int n = arr.size();
     //iterate through the vector
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n;){
         //check if two adjacent elements in a sorted vector are the same
         //if not push onto the unique_array
         if(i == 0 || arr[i] != arr[i-1]){
@@ -34,9 +36,9 @@ int main(){
     //call function
     vector<int> unique_arr = remove_duplicates(arr, removed_elements);
     //print out the resulting vector
-    cout << "Original array: ";
+    cout << "Original array: "
     for(int i=0; i<arr.size(); i++){
-        cout << arr[i] << " ";
+        cout << arr[i] << " "
     }
     cout << endl;
     cout << "Unique array: ";
@@ -44,9 +46,9 @@ int main(){
         cout << unique_arr[i] << " ";
     }
     cout << endl;
-    cout << "Removed elements: ";
+    cout << "Removed elements: "
     for(int i=0; i<removed_elements.size(); i++){
-        cout << removed_elements[i] << " ";
+        cout << removed_elements[i] << " "
     }
     cout << endl;
     return 0;
