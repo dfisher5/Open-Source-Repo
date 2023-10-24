@@ -2,6 +2,10 @@
 #include <fstream>
 using namespace std;
 
+    /**
+    This is a function called main
+    It does something
+    */
 int main() {
     ofstream file;
     file.open("numbers.html");
